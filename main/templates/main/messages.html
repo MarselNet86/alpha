@@ -1,0 +1,7 @@
+{% for message in messages %}
+  {% if message.tags == 'error' %}
+    <div class="mt-3 alert alert-danger">{{ message }}</div>
+  {% elif message.tags == 'success' %}
+    <div class="mt-3 alert alert-success">{{ message }}</div>
+  {% endif %}
+{% endfor %}

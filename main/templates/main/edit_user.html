@@ -1,0 +1,14 @@
+{% extends "main/base.html" %}
+{% block title %}Редактирование пользователя{% endblock title %}
+{% block content %}
+<div class="container mt-4">
+  <h2>Редактировать: {{ user.name }}</h2>
+  <form method="post" class="border p-3 rounded bg-light">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="col">
+        <button type="submit" class="btn btn-success w-100">Сохранить</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}
